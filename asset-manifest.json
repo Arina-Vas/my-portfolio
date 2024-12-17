@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.31d6cfe0.css",
+    "main.js": "/my-portfolio/static/js/main.0bb3ba1b.js",
+    "static/js/787.25eaef86.chunk.js": "/my-portfolio/static/js/787.25eaef86.chunk.js",
+    "static/media/myPhoto-removebg.png": "/my-portfolio/static/media/myPhoto-removebg.c4c3471d89c749cebbee.png",
+    "static/media/proj-1c.jpg": "/my-portfolio/static/media/proj-1c.ac1da1e0d94f343932bc.jpg",
+    "static/media/icons-sprite.svg": "/my-portfolio/static/media/icons-sprite.3651feb14eeb940d6237aab12380436c.svg",
+    "static/media/proj-2.webp": "/my-portfolio/static/media/proj-2.0b914327eb4e119b8fa4.webp",
+    "static/media/proj-3.webp": "/my-portfolio/static/media/proj-3.f328dcaa3d0822a698ee.webp",
+    "index.html": "/my-portfolio/index.html",
+    "static/media/yellowBg.svg": "/my-portfolio/static/media/yellowBg.a950574fe0db3a470ef37191e16c1b93.svg",
+    "static/media/triangle.svg": "/my-portfolio/static/media/triangle.b3ef5496510bbfda1a03c04b3c020f6d.svg",
+    "main.0bb3ba1b.js.map": "/my-portfolio/static/js/main.0bb3ba1b.js.map",
+    "787.25eaef86.chunk.js.map": "/my-portfolio/static/js/787.25eaef86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.0bb3ba1b.js"
+  ]
+}
