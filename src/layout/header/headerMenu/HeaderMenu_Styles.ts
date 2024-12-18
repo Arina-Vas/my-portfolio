@@ -1,50 +1,26 @@
-import React from 'react';
 import styled, {css} from "styled-components";
-import {Link} from "../../../Components/Link";
 import {theme} from "../../../styles/Theme";
+import {Link} from "../../../Components/Link";
 
-
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
-    return (
-        <StyledMobileMenu>
-            <BurgerBtn isOpen={false}>
-                <span></span>
-            </BurgerBtn>
-            <MobileMenuPopup isOpen={false}>
-                <ul>
-                    {props.menuItems.map((item, index) => {
-                        return <ListItem key={index}>
-                            <Link>
-                                {item}
-                                <Mask>
-                                    <span>
-                                    {item}
-                                    </span>
-                                </Mask>
-                                <Mask>
-                                    <span>
-                                    {item}
-                                    </span>
-                                </Mask>
-                            </Link>
-                        </ListItem>
-                    })}
-                </ul>
-            </MobileMenuPopup>
-
-        </StyledMobileMenu>
-    );
-};
-
-const StyledMobileMenu = styled.nav`
-    opacity: 0;
-    @media ${theme.media.tablet} {
-        opacity: 1;
-    };
-
-
-}
+// DesktopMenu
+const DesktopMenu = styled.nav`
+    ul {
+        justify-content: center;
+        display: flex; 
+        gap: 48px;
+    }
 `
+
+const DesktopMenuItem = styled.li`
+    ${Link} {
+        font-weight: 500;
+        line-height: 1.5;
+    }
+`
+
+// DesktopMenu
+const MobileMenu = styled.nav``
+
 const BurgerBtn = styled.button<{ isOpen: boolean }>`
     width: 30px;
     height: 30px;
@@ -101,8 +77,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     right: 0;
     bottom: 0;
     z-index: 99999;
-    background-color: ${theme.colors.accent};
-    opacity: 0.9;
+    background-color: rgba(249, 250, 255, 0.9);
+
     display: none;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -125,7 +101,7 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow: hidden;
-    color: ${theme.colors.primaryFont};
+    color: ${theme.colors.accent};
 
     & + & {
         top: 50%;
@@ -137,7 +113,7 @@ const Mask = styled.span`
     }
 `
 
-const ListItem = styled.li`
+const MobileMenuItem = styled.li`
     
     ${Link} {
         color: transparent;
@@ -161,14 +137,14 @@ const ListItem = styled.li`
         z-index: 1;
     }
 
-    &:hover {
+    &:active {
         &::before {
             display: inline-block;
         }
 
         ${Mask} {
             transform: skewX(12deg) translateX(5px);
-            color: ${theme.colors.primaryFont};
+            //color: ${theme.colors.primaryFont};
 
             & + ${Mask} {
                 transform: skewX(12deg) translateX(-5px);
@@ -177,5 +153,12 @@ const ListItem = styled.li`
     }
 }
 `
-
-
+export const S = {
+    DesktopMenu,
+    DesktopMenuItem,
+    MobileMenu,
+    MobileMenuPopup,
+    MobileMenuItem,
+    BurgerBtn,
+    Mask
+}
