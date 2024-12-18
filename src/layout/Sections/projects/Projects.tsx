@@ -6,6 +6,7 @@ import {Slider} from "./slider/Slider";
 import firstProjectImg from "../../../assets/img/photos/proj-1c.jpg"
 import secondProjectImg from "../../../assets/img/photos/proj-2.webp"
 import thirdProjectImg from "../../../assets/img/photos/proj-3.webp"
+import {FlexWrapper} from "../../../Components/FlexWrapper";
 
 const projects = [
     {
@@ -21,23 +22,22 @@ const projects = [
     {
         title: "Project Name",
         text: "You can also add in this description the type of the project, if it was for web, mobile, electron.",
-        image: thirdProjectImg
-    }]
+        image: thirdProjectImg    }
+]
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
     return (
         <StyledProjects>
             <Container>
+                <FlexWrapper direction={"column"} align={"center"}>
                 <SectionTitle>Projects</SectionTitle>
-                <Slider items={projects} />
+                <Slider items={projects}/>
+                </FlexWrapper>
             </Container>
         </StyledProjects>
     );
 };
 
 const StyledProjects = styled.section`
-${Container} {
-    overflow: hidden;
-}
 `
 
