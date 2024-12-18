@@ -11,7 +11,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     border-radius: 8px;
     padding: 8px 24px;
     //width: 115px;
-    //height: 43px;
+    height: 43px;
     
 
     ${(props) => props.btnType === "primary" && css<StyledBtnPropsType>`

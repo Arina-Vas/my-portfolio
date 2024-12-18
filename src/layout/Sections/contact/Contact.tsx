@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../Components/SectionTitle";
 import {Field} from "./field/Field";
 import {StyledBtn} from "../../../Components/StyledBtn";
-import {Icon} from "../../../Components/Icon/Icon";
 import {FlexWrapper} from "../../../Components/FlexWrapper";
 import {Container} from "../../../Components/Container";
 import {theme} from "../../../styles/Theme";
@@ -32,16 +31,13 @@ const StyledForm = styled.div`
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
     max-width: 400px;
     
     textarea{
         resize: none;
-        height: 190px;
+        height: 160px;        
         
-        @media ${theme.media.mobile} {
-            height: 160px;
-        }        
     }
 
     
@@ -51,7 +47,7 @@ const StyledForm = styled.div`
 `
 // const Field = styled.section` `
 const StyledContact = styled.section`
-    padding: 0;
+    margin-bottom: 0;
 `
 
 

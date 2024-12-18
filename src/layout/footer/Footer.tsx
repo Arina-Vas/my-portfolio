@@ -19,17 +19,17 @@ export const Footer = () => {
                     <SocialList>
                         <SocialItem>
                             <SocialLink>
-                                <Icon width={"25px"} height={"25px"} viewBox={"0 0 50 50"} iconId={"instagram"}></Icon>
+                                <Icon width={"50%"} height={"50%"} viewBox="0 0 24 24" iconId={"telegram"}></Icon>
                             </SocialLink>
                         </SocialItem>
                         <SocialItem>
                             <SocialLink>
-                                <Icon width={"25px"} height={"25px"} viewBox={"0 0 50 50"} iconId={"linkedin"}></Icon>
+                                <Icon width={"50%"} height={"50%"} viewBox="0 0 24 24" iconId={"linkedin"}></Icon>
                             </SocialLink>
                         </SocialItem>
                         <SocialItem>
                             <SocialLink>
-                                <Icon width={"25px"} height={"25px"} viewBox={"0 0 50 50"} iconId={"envelope"}></Icon>
+                                <Icon width={"50%"} height={"50%"} viewBox="0 0 24 24" iconId={"instagram"}></Icon>
                             </SocialLink>
                         </SocialItem>
                     </SocialList>
@@ -38,7 +38,6 @@ export const Footer = () => {
                     </StyledText>
                     <Copyright>Arina Vasilevskaya 2024</Copyright>
                 </FlexWrapper>
-                <img src={`${footerBG}`} alt={""}/>
             </Container>
 
         </StyledFooter>
@@ -47,48 +46,32 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-
     display: flex;
-    //align-items: flex-end;
     justify-content: center;
-    min-height: 344px;
-    position: relative;
-    z-index: 0;
-    padding-bottom: 5px;
-
-    img {
-        min-height: 344px;
-        max-height: 485px;
-        width: 100%;
-        position: absolute;
-        z-index: -9999999999999;
-        bottom: 0;
-        left: 0;
-        object-fit: cover;
-
-        @media ${theme.media.tablet} {
-
-
-        }
+    min-height:  344px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(${footerBG});
+    background-position: center bottom;
+    
+    @media ${theme.media.desktop} {
+        background-size: 100% 100%;
     }
 `
 
-const Copyright = styled.small`
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-`
-const StyledText = styled.p`
-    ${font({Fmax: 18, Fmin: 14, family:"\"Raleway\", sans-serif"})}
 
+const SocialListTitle = styled.span`
+    ${font({weight: 500, Fmax: 36, Fmin: 28, family: "\"Playfair\", sans-serif"})}
+    line-height: 1.5%;
+    text-align: center;
+    margin-top: 50px;
 `
 
 const SocialList = styled.ul`
-
     list-style: none;
     display: flex;
     align-items: center;
     gap: 40px;
-
 `
 
 const SocialItem = styled.li`
@@ -100,11 +83,11 @@ const SocialLink = styled.a`
     justify-content: center;
     z-index: 10;
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     color: #383838;
 
-    &::after {
+    &::after, &::before {
         z-index: -1;
         content: '';
         position: absolute;
@@ -113,39 +96,32 @@ const SocialLink = styled.a`
         width: 100%;
         height: 100%;
         background-color: ${theme.colors.accent};
-        opacity: 0.5;
         mask-image: url("${triangle}");
         mask-size: contain;
         mask-repeat: no-repeat;
+
+    }
+
+    &::after {
+        opacity: 0.5;
         transform: rotate(25deg);
     }
 
+
     &::before {
-        z-index: -2;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: ${theme.colors.accent};
-        transform: rotate(75deg);
+        transform: rotate(-25deg);
         opacity: 0.7;
-        mask-image: url("${triangle}");
-        mask-size: contain;
-        mask-repeat: no-repeat;
     }
-
-
+`
+const Copyright = styled.small`
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+`
+const StyledText = styled.p`
+    ${font({Fmax: 18, Fmin: 14, family:"\"Raleway\", sans-serif"})}
 
 `
 
-const SocialListTitle = styled.span`
-    ${font({weight: 500, Fmax: 36, Fmin: 28, family: "\"Playfair\", sans-serif"})}
-    line-height: 1.5%;
-    text-align: center;
-    margin-top: 50px;
-`
 
 
 

@@ -47,7 +47,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section {
-        padding: 10px 0 145px;
+        margin-bottom: 145px;
+
+        @media ${theme.media.mobile} {
+            margin-bottom: 80px;
+        }
+        
     }
 
 `

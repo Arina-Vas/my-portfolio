@@ -125,7 +125,6 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow: hidden;
-    //outline: 1px solid red;
     color: ${theme.colors.primaryFont};
 
     & + & {
@@ -160,14 +159,11 @@ const ListItem = styled.li`
         left: -10px;
         right: -10px;
         z-index: 1;
-
-        //transform: scale(0);
     }
 
     &:hover {
         &::before {
             display: inline-block;
-            //transform: scale(1);
         }
 
         ${Mask} {

@@ -12,24 +12,20 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
+            <Icon iconId={props.iconId} width={"120px"} height={"120px"} />
         </StyledSkill>
     );
 };
 
 const StyledSkill = styled.div`
-    width: 120px;
+    width: 25%;
+    height: 170px;
     flex-grow: 1;
-    //min-width: 16%;
+    padding-bottom: 50px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
+    justify-content: space-around; //❗❗❗
     color: ${theme.colors.accent};
 
-    @media ${theme.media.tablet} {
-        width: 30%;
-    }
 
     @media ${theme.media.mobile} {
         width: 50%;

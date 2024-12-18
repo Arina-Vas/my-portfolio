@@ -13,10 +13,10 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper justify={"space-between"} align={'center'} wrap={'wrap'}>
+                <FlexWrapper justify={"space-between"} align={'center'} wrap={'wrap-reverse'}>
                     <TextWrapper>
                         <MainTitle>Frontend Developer</MainTitle>
-                        <SubTitle>Hello, my name is Arina Vasilevskaya</SubTitle>
+                        <SubTitle>Hello, I'm Arina Vasilevskaya</SubTitle>
                         <Text>
                             Short text with details about you, what you do or your professional career. You can add more
                             information on the about page.
@@ -38,18 +38,18 @@ export const Main = () => {
 
 
 const StyledMain = styled.section`
-    padding-top:100px;
+    min-height: 630px;
+    width: 100%;
+    padding-top: 100px;
     overflow: hidden;
     position: relative;
-    //min-height: 630px;
-    @media ${theme.media.mobile} {
-        padding-top:0;
-    }
 `
 
 
 const TextWrapper = styled.div`
+    width: 50%;
     max-width: 508px;
+    min-height: 426px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -59,28 +59,25 @@ const TextWrapper = styled.div`
         gap: 12px;
     }
 
-    @media screen and (max-width: 1024px) {
-        margin-top: 300px;
-    }
-
     @media ${theme.media.tablet} {
-        margin-top: 430px;
+        margin-top: 340px;
+        width: 100%;
     }
 
     @media ${theme.media.mobile} {
-        margin-top:550px;
+        margin-top: 340px;
     }
-
-    @media screen and (max-width: 450px) {
-        margin-top:430px;
-    }
+}
 `
 
 const PhotoWrapper = styled.div`
+
     left: 50%;
     position: absolute;
-    height: 877px;
-    width: 777px;
+    min-height: 877px;
+    max-width: 777px;
+    width: 80%;
+    height: 100%;
     bottom: 10%;
     background-color: ${theme.colors.accent};
     mask-image: url(${yellowBg});
@@ -88,47 +85,37 @@ const PhotoWrapper = styled.div`
     mask-size: 100%;
     mask-position: left bottom;
 
-    @media screen and (max-width: 1024px) {
-        left: 40%;
-        bottom: 35%;
-    }
-
     @media ${theme.media.tablet} {
+        width: 100%;
+        bottom: 35%;
         left: 20%;
-        bottom: 40%;
     }
 
     @media ${theme.media.mobile} {
-        left: 0;
-        bottom: 45%;
-    }
-
-    @media screen and (max-width: 450px) {
         height: 550px;
-        width:486px;
-        top: -15%;
+        min-width: 486px;
+        left: 0;
+        bottom: 53%;
+
     }
 `
 
 const Photo = styled.img`
     position: absolute;
     object-fit: contain;
-    width: 45%;
-    top:35%;                
-    left: 30%;
+    max-width: 630px;
+    height: 150%;
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%);
 
-    @media screen and (max-width: 1024px) {
-        left: 20%;}
 
-     @media screen and (max-width: 450px) {
+    @media ${theme.media.mobile} {
+        height: 120%;
         left: 30%;
-        width: 50%;
+        top: 58%;
+        transform: translateX(0);
     }
-    
-    
-
-
-
 `
 
 
@@ -137,6 +124,7 @@ const Text = styled.p`
     font-size: 24px;
     color: ${theme.colors.secondaryFont};
     margin: 32px 0;
+    text-align: left;
 `
 
 const MainTitle = styled.h1`
@@ -144,10 +132,11 @@ const MainTitle = styled.h1`
     font-size: 20px;
     text-transform: uppercase;
     color: ${theme.colors.accent};
-    margin-bottom: 12px;
+    margin: 12px 0;
+
 `
 const SubTitle = styled.h2`
-    ${font({weight: 700, Fmax: 64, Fmin: 46, family:"\"Roboto\", sans-serif"})}
+    ${font({weight: 700, Fmax: 64, Fmin: 46, family: "\"Roboto\", sans-serif"})}
 `
 
 

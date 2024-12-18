@@ -10,19 +10,15 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
-                <FlexWrapper justify={"space-between"} wrap={"wrap"} >
-                    <Skill iconId={"vscode"}/>
+                <FlexWrapper justify={"space-between"} wrap={"wrap"} >  {/*❗❗❗gap*/}
+                    <Skill iconId={"ts"}/>
                     <Skill iconId={"js"}/>
-                    <Skill iconId={"css"}/>
+                    <Skill iconId={"react"}/>
                     <Skill iconId={"html"}/>
-                    {/*<Skill iconId={"greensock"}/>*/}
-                    {/*<Skill iconId={"vector"}/>*/}
+                    <Skill iconId={"ws"}/>
+                    <Skill iconId={"css"}/>
+                    <Skill iconId={"st-components"}/>
                     <Skill iconId={"github"}/>
-                    <Skill iconId={"git"}/>
-                    {/*<Skill iconId={"react"}/>*/}
-                    {/*<Skill iconId={"sass"}/>*/}
-                    {/*<Skill iconId={"bootstrap"}/>*/}
-                    {/*<Skill iconId={"tailwind"}/>*/}
                 </FlexWrapper>
             </Container>
         </StyledSkills>

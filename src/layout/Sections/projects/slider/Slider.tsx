@@ -8,7 +8,7 @@ import {StyledBtn} from "../../../../Components/StyledBtn";
 export const Slider = (props: { items: Array<{ title: string, text: string, image: any }> }) => {
     return (
         <StyledSlider>
-            <FlexWrapper justify={"center"} align={"center"} direction={"column"} gap={"80px"}>
+            <FlexWrapper align={"center"} direction={"column"} gap={"75px"}>
                 {props.items.map((item, index) => {
                     return <Slide key={index}>
                         <TextWrapper>
@@ -29,19 +29,29 @@ export const Slider = (props: { items: Array<{ title: string, text: string, imag
     )
 }
 
+const StyledSlider = styled.div`
+    @media ${theme.media.mobile} {
+        ${FlexWrapper} {
+            gap: 45px;
+        }
+    }
+`
+
 const Slide = styled.div`
     display: flex;
     flex-grow: 1;
     justify-content: center;
-    min-height: 526px;
+    
+    min-height: 524px;
     max-width: 992px;
     width: 100%;
+    
     border-radius: 24px;
     box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
     background-color: ${theme.colors.secondaryBg};
     overflow: hidden;
 
-    margin-bottom: 32px;
+
 
     &:nth-of-type(even) {
         img {
@@ -59,7 +69,7 @@ const Slide = styled.div`
 `
 
 const TextWrapper = styled.div`
-    min-height: 526px;
+    min-height: 524px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +89,7 @@ const TextWrapper = styled.div`
 const SlideTitle = styled.h3`
     font-family: "Playfair", sans-serif;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 46px;
     line-height: 1.5;
 `
 
@@ -88,11 +98,11 @@ const SlideText = styled.p`
     font-size: 18px;
     line-height: 1.5;
     color: ${theme.colors.secondaryFont};
-    padding: 24px 0;
+    margin: 20px 0;
 `
 
 const SlideImage = styled.img`
-    min-height: 526px;
+    min-height: 524px;
     width: 496px;
     object-fit: cover;
     @media ${theme.media.tablet} {
@@ -100,8 +110,7 @@ const SlideImage = styled.img`
     }
 `
 
-const StyledSlider = styled.div`
-`
+
 
 const Pagination = styled.div`
 

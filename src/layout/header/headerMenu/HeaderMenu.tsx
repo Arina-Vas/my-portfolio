@@ -12,16 +12,6 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
                     return <ListItem key={index}>
                         <Link>
                             {item}
-                            {/*<Mask>*/}
-                            {/*    <span>*/}
-                            {/*    {item}*/}
-                            {/*    </span>*/}
-                            {/*</Mask>*/}
-                            {/*<Mask>*/}
-                            {/*    <span>*/}
-                            {/*    {item}*/}
-                            {/*    </span>*/}
-                            {/*</Mask>*/}
                         </Link>
                     </ListItem>
                 })}
@@ -48,5 +38,3 @@ const ListItem = styled.li`
     }
 `
 
-const Mask = styled.span`
-`
