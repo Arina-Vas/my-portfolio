@@ -20,12 +20,13 @@ const menuItems = [
     },
 ]
 
-export const Menu = () => {
+export const Menu: React.FC<{onCloseMenu?: () => void}> = ( props: { onCloseMenu?: () => void; }) => {
     return (
         <ul>
             {menuItems.map((item, index) => {
                 return <S.MenuItem key={index}>
                     <S.NavLink
+                        onClick={props.onCloseMenu}
                         activeClass="active"
                         to={item.href}
                         spy={true}
