@@ -10,7 +10,6 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     align-items: center;  
     border-radius: 8px;
     padding: 8px 24px;
-    //width: 115px;
     height: 43px;
     
 
@@ -24,5 +23,9 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 18px;
-    //line-height: 1.5;
+    transition: ${theme.animations.transition};
+
+    &:hover{
+      transform: scale(1.05);  
+    }
 `;
