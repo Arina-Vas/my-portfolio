@@ -3,13 +3,15 @@ import photo from '../../../assets/img/photos/myPhoto-removebg.png'
 import {FlexWrapper} from "../../../Components/FlexWrapper";
 import {StyledBtn} from "../../../Components/StyledBtn";
 import {Container} from "../../../Components/Container";
-import {Link} from "../../../Components/Link";
 import {S} from "./Main_Styles"
+import {Link} from "../../../Components/Link";
+
+
 
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id="about">
             <Container>
                 <FlexWrapper justify={"space-between"} align={'center'} wrap={'wrap-reverse'}>
                     <S.TextWrapper>
@@ -20,8 +22,8 @@ export const Main: React.FC = () => {
                             information on the about page.
                         </S.Text>
                         <div>
-                            <StyledBtn as={Link} btnType={"primary"}>Projects</StyledBtn> {/*as link*/}
-                            <StyledBtn as={Link} btnType={"secondary"}>LinkedIn</StyledBtn> {/*as link*/}
+                            <StyledBtn smooth={true} as={S.BtnLink} to={'projects'} btnType={"primary"}>Projects</StyledBtn>
+                            <StyledBtn target="_blank" as={Link} href={'https://www.linkedin.com/'} btnType={"secondary"}>LinkedIn</StyledBtn>
                         </div>
                     </S.TextWrapper>
                     <S.PhotoWrapper>

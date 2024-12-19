@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import yellowBg from "../../../assets/img/yellowBg.svg";
 import {font} from "../../../styles/Common";
+import {Link} from "react-scroll";
 
 const Main = styled.section`
     min-height: 630px;
@@ -103,6 +104,8 @@ const SubTitle = styled.h2`
     ${font({weight: 700, Fmax: 64, Fmin: 46, family: "\"Roboto\", sans-serif"})}
 `
 
+const BtnLink = styled(Link)``
+
 export const S = {
     Main,
     TextWrapper,
@@ -110,5 +113,6 @@ export const S = {
     Photo,
     Text,
     MainTitle,
-    SubTitle
+    SubTitle,
+    BtnLink
 }
