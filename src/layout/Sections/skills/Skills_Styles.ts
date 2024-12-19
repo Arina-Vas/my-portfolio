@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
+
 // Skills
-const Skills = styled.section``
+const Skills = styled.section`
+
+`
 
 //Skill
 const Skill = styled.div`
-    width: 25%;
+    width: 25%; 
     height: 170px;
-    flex-grow: 1;
     padding-bottom: 50px;
     display: flex;
     justify-content: space-around; //❗❗❗
