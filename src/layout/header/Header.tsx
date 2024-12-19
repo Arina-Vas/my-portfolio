@@ -1,12 +1,10 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Container} from "../../Components/Container";
 import {FlexWrapper} from "../../Components/FlexWrapper";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
 import {S} from "./Header_Styles"
-
-
-const items = ["About", "Projects", "Contacts"]
+import {animateScroll as scroll} from 'react-scroll'
 
 
 export const Header: React.FC = () => {
@@ -20,19 +18,36 @@ export const Header: React.FC = () => {
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
 
+    const [showBackGround, setShowBackGround] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 400) {
+                setShowBackGround(true)
+            } else {
+                setShowBackGround(false)
+            }
+
+        });
+    })
+
 
     return (
-        <S.Header>
+            <S.Header className={showBackGround ? 'backGround' : ''}>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
-                    <S.Name>Arina Vasilevskaya</S.Name>
+                    <S.Name onClick={() => {
+                        scroll.scrollToTop()
+                    }}>Arina Vasilevskaya</S.Name>
 
-                    {width < breakpoint ? <MobileMenu menuItems={items}/>
-                        : <DesktopMenu menuItems={items}/>}
+                    {width < breakpoint ? <MobileMenu/>
+                        : <DesktopMenu/>}
 
                 </FlexWrapper>
             </Container>
         </S.Header>
+
     );
 };
 
