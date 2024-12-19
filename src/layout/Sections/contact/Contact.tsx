@@ -8,7 +8,7 @@ import {S} from "./Contact_Styles"
 
 export const Contact: React.FC = () => {
     return (
-        <S.Contact>
+        <S.Contact id="contact">
             <Container>
                 <SectionTitle>Contact me</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>
