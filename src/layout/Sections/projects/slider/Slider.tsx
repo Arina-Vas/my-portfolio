@@ -49,13 +49,13 @@ const Slide = (props: SliderPropsType) => {
 
 export const Slider = () => {
     const info = projects.map((item, index) => (
-
-            <Slide key={index}
+        <div key={index} style={{padding: "0 5px"}}>
+            <Slide
                 title={item.title}
                 text={item.text}
                 image={item.image}
             />
-        ));
+        </div>));
     return (
         <S.Slider>
             <AliceCarousel

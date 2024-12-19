@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
-import {FlexWrapper} from "../../../../Components/FlexWrapper";
 import {StyledBtn} from "../../../../Components/StyledBtn";
 
 const Slider = styled.div`
@@ -84,6 +83,7 @@ const SlideImage = styled.img`
     user-select: none;
     @media ${theme.media.tablet} {
         width: 100%;
+        height: 50%;
     }
 `
 
