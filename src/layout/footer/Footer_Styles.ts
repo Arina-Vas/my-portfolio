@@ -3,6 +3,8 @@ import footerBG from "../../assets/img/Vector.png";
 import {theme} from "../../styles/Theme";
 import {font} from "../../styles/Common";
 import triangle from "../../assets/img/triangle.svg";
+import {Icon} from "../../Components/Icon/Icon";
+import {Link} from "../../Components/Link";
 
 const Footer = styled.footer`
     display: flex;
@@ -73,6 +75,14 @@ const SocialLink = styled.a`
         transform: rotate(-25deg);
         opacity: 0.7;
     }
+
+    & svg{
+        transition: ${theme.animations.transition};
+    }
+
+    & svg:hover {
+        transform: scale(1.2);
+    }
 `
 
 const Copyright = styled.small`
@@ -82,7 +92,14 @@ const Copyright = styled.small`
 
 const Text = styled.p`
     ${font({Fmax: 18, Fmin: 14, family: "\"Raleway\", sans-serif"})}
-
+    ${Link} {
+        font-weight: 600;
+        transition: ${theme.animations.transition};
+    }
+    }
+    ${Link}:hover {
+        color: ${theme.colors.secondaryBg};
+    }
 `
 
 export const S = {
