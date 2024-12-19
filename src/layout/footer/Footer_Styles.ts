@@ -93,12 +93,13 @@ const Copyright = styled.small`
 const Text = styled.p`
     ${font({Fmax: 18, Fmin: 14, family: "\"Raleway\", sans-serif"})}
     ${Link} {
+        color: ${theme.colors.primaryFont};
         font-weight: 600;
         transition: ${theme.animations.transition};
     }
     }
     ${Link}:hover {
-        color: ${theme.colors.secondaryBg};
+        color: ${theme.colors.secondaryFont};
     }
 `
 

@@ -13,7 +13,6 @@ export const Projects: React.FC = () => {
                 <FlexWrapper direction={"column"} align={"center"}>
                 <SectionTitle>Projects</SectionTitle>
                 <Slider/>
-                {/*<Slider items={projects}/>*/}
                 </FlexWrapper>
             </Container>
         </StyledProjects>
