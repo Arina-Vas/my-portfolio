@@ -1,27 +1,60 @@
 import styled from "styled-components";
-import {StyledBtn} from "../../../Components/StyledBtn";
+import {theme} from "../../../styles/Theme";
 
-const Form = styled.div`
+const Form = styled.form`
     width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 20px;
     max-width: 400px;
-        textarea{
+
+    textarea {
         resize: none;
-        height: 160px;        
+        height: 160px;
+
+    }
+
+    & div {
+        width: 100%;
         
-    }    
-    ${StyledBtn} {
-        align-self: end;
     }
 `
 const Contact = styled.section`
     margin-bottom: 0;
 `
 
+const Message=styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 24px;
+    padding: 10px;
+    background-color: ${theme.colors.accent};
+
+    img {
+        height: 30px;
+        width: 30px;
+    }
+
+    transform: scale(0);
+    transition: .3s ease-in-out;
+
+    &.success {
+        transform: scale(1);
+    }
+
+    @media ${theme.media.desktop} {
+        bottom: 100px;
+    }
+
+`
+
 export const S = {
     Form,
-    Contact
+    Contact,
+    Message
 }
