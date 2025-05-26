@@ -4,42 +4,26 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import './../../../../styles/slider.css'
 import {S} from "./Slider_Styles";
 import {StyledBtn} from "../../../../Components/StyledBtn";
-import firstProjectImg from "../../../../assets/img/photos/proj-1c.jpg";
-import secondProjectImg from "../../../../assets/img/photos/proj-2.webp";
-import thirdProjectImg from "../../../../assets/img/photos/proj-3.webp";
+import {ProjectType} from "../Projects";
 
-const projects = [
-    {
-        title: "Project Name",
-        text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.",
-        image: firstProjectImg
-    },
-    {
-        title: "Project Name",
-        text: "What was your role, your deliverables, if the project was personal, freelancing.",
-        image: secondProjectImg
-    },
-    {
-        title: "Project Name",
-        text: "You can also add in this description the type of the project, if it was for web, mobile, electron.",
-        image: thirdProjectImg
-    }
-]
+
 
 type SliderPropsType = {
-    title: string,
-    text: string,
-    image: string,
+    items: ProjectType[]
 }
 
 
-const Slide = (props: SliderPropsType) => {
+const Slide = (props: ProjectType) => {
     return (
         <S.Slide>
             <S.TextWrapper>
                 <S.SlideTitle>{props.title}</S.SlideTitle>
                 <S.SlideText>{props.text}</S.SlideText>
-                <StyledBtn btnType={"secondary"}>View Project</StyledBtn>
+                <StyledBtn btnType={"secondary"}
+                           as={'a'}
+                           href={props.link}
+                           target="_blank" rel="noopener noreferrer">
+                    View Project</StyledBtn>
             </S.TextWrapper>
             <S.SlideImage src={props.image} alt={props.title}/>
         </S.Slide>
@@ -47,13 +31,14 @@ const Slide = (props: SliderPropsType) => {
     )
 }
 
-export const Slider = () => {
-    const info = projects.map((item, index) => (
+export const Slider = (props: SliderPropsType) => {
+    const info = props.items.map((item, index) => (
         <div key={index} style={{padding: "0 5px"}}>
             <Slide
                 title={item.title}
                 text={item.text}
                 image={item.image}
+                link={item.link}
             />
         </div>));
     return (
@@ -65,7 +50,7 @@ export const Slider = () => {
                 autoPlay
                 autoPlayStrategy={'action'}
                 autoPlayInterval={1000}
-                animationDuration={1500}
+                animationDuration={2000}
                 infinite
             />
         </S.Slider>

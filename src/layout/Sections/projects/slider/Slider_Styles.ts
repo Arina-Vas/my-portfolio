@@ -40,6 +40,10 @@ const Slide = styled.div`
     &:active {
         cursor: grabbing;
     }
+    ${StyledBtn}{
+        z-index: 3333;
+        cursor: pointer;
+    }
 `
 
 const TextWrapper = styled.div`
@@ -49,10 +53,11 @@ const TextWrapper = styled.div`
     max-width: 496px;
     width: 100%;
     padding: 0 40px 15px 50px ;
-    pointer-events: none;
+    //pointer-events: none;
     user-select: none;
 
     ${StyledBtn} {
+        z-index: 3333;
         border-width: 1px;
         border-radius: 24px;
         white-space: nowrap;
@@ -77,7 +82,7 @@ const SlideText = styled.p`
 
 const SlideImage = styled.img`
     width: 50%;
-    max-width: 496px;
+    max-height: 524px;
     object-fit: cover;
     pointer-events: none;
     user-select: none;

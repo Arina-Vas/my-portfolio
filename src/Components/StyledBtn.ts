@@ -1,9 +1,10 @@
 import styled, {css} from "styled-components";
 import {theme} from "../styles/Theme";
+import {ButtonHTMLAttributes} from "react";
 
 type StyledBtnPropsType = {
     btnType?: "primary" | "secondary";
-}
+}  & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
     display: flex;

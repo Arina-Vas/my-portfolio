@@ -7,14 +7,14 @@ import {S} from "./Footer_Styles"
 import {AttentionSeeker} from "react-awesome-reveal";
 
 
-const socialData = [
+export const socialData = [
     {
         iconId: "telegram",
         href: "https://t.me/vasy_an",
     },
     {
         iconId: "linkedin",
-        href: "https://www.linkedin.com/",
+        href: "https://www.linkedin.com/in/arina-vasilevskaya-501908367/",
     },
     {
         iconId: "instagram",
@@ -34,7 +34,7 @@ export const Footer = () => {
                        < AttentionSeeker delay={100} effect={"jello"} cascade>
                         {socialData.map((s, index) => {
                             return (
-                                <S.SocialItem>
+                                <S.SocialItem key={index}>
                                     <S.SocialLink target="_blank" href={s.href}>
                                         <Icon width={"35"} height={"35"} viewBox="0 0 24 24"
                                               iconId={s.iconId}></Icon>
@@ -46,7 +46,7 @@ export const Footer = () => {
                     <S.Text>More projects I’ve worked on github
                         <Link target="_blank" href={"https://github.com/Arina-Vas"}> @Arina-Vas </Link>
                     </S.Text>
-                    <S.Copyright>© Arina Vasilevskaya 2024</S.Copyright>
+                    <S.Copyright>© Arina Vasilevskaya 2025</S.Copyright>
                 </FlexWrapper>
             </Container>
 

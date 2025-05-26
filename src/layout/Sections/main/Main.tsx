@@ -6,8 +6,7 @@ import {Container} from "../../../Components/Container";
 import {S} from "./Main_Styles"
 import {Link} from "../../../Components/Link";
 
-
-
+const about = 'Aspiring Frontend Developer with strong foundational skills gained through intensive training at IT-Incubator. Built several educational projects using JavaScript, TypeScript, React, Redux, and RTK Query, focusing on responsive design, state management, and API integration.Confident in working with application state, handling async data, and writing modular, maintainable styles using CSS Modules. I’m passionate about clean, readable code and constantly improving my skills.'
 
 export const Main: React.FC = () => {
     return (
@@ -18,12 +17,11 @@ export const Main: React.FC = () => {
                         <S.MainTitle>Frontend Developer</S.MainTitle>
                         <S.SubTitle>Hello, I'm Arina Vasilevskaya</S.SubTitle>
                         <S.Text>
-                            Short text with details about you, what you do or your professional career. You can add more
-                            information on the about page.
+                            {about}
                         </S.Text>
                         <div>
                             <StyledBtn smooth={true} as={S.BtnLink} to={'projects'} btnType={"primary"}>Projects</StyledBtn>
-                            <StyledBtn target="_blank" as={Link} href={'https://www.linkedin.com/'} btnType={"secondary"}>LinkedIn</StyledBtn>
+                            <StyledBtn target="_blank" as={Link} href={"https://www.linkedin.com/in/arina-vasilevskaya-501908367/"} btnType={"secondary"}>LinkedIn</StyledBtn>
                         </div>
                     </S.TextWrapper>
                     <S.PhotoWrapper>

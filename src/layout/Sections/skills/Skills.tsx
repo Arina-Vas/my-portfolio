@@ -31,7 +31,6 @@ const skillData = [
     {
         iconId: "github"
     },
-
 ]
 
 export const Skills: React.FC = () => {
@@ -42,7 +41,7 @@ export const Skills: React.FC = () => {
                 <Zoom damping={0.2} duration={2000}>
                 <FlexWrapper justify={"space-between"} wrap={"wrap"}>
                         {skillData.map((skill, index) => {
-                            return <S.Skill>
+                            return <S.Skill key={index}>
                                 <Icon iconId={skill.iconId} width={"120"} height={"120"}/>
                             </S.Skill>
                         })}
