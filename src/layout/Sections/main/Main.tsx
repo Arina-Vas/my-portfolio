@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../../../assets/img/photos/myPhoto-removebg.png'
+import photo from '../../../assets/img/photos/photo.png'
 import {FlexWrapper} from "../../../Components/FlexWrapper";
 import {StyledBtn} from "../../../Components/StyledBtn";
 import {Container} from "../../../Components/Container";

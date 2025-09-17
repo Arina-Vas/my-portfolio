@@ -36,14 +36,13 @@ const TextWrapper = styled.div`
 }`
 
 const PhotoWrapper = styled.div`
-
     left: 50%;
     position: absolute;
     min-height: 877px;
     max-width: 777px;
     width: 80%;
     height: 100%;
-    bottom: 10%;
+    bottom: 20%;
     background-color: ${theme.colors.accent};
     mask-image: url(${yellowBg});
     mask-repeat: no-repeat;
@@ -52,7 +51,7 @@ const PhotoWrapper = styled.div`
 
     @media ${theme.media.tablet} {
         width: 100%;
-        bottom: 35%;
+        bottom: 46%;
         left: 20%;
     }
 
@@ -60,7 +59,7 @@ const PhotoWrapper = styled.div`
         height: 550px;
         min-width: 486px;
         left: 0;
-        bottom: 53%;
+        bottom: 61%;
 
     }
 `
@@ -69,16 +68,19 @@ const Photo = styled.img`
     position: absolute;
     object-fit: contain;
     max-width: 630px;
-    height: 150%;
-    top: 39%;
-    left: 50%;
+    height: 130%;
+    top: 37%;
+    left: 45%;
     transform: translateX(-50%);
 
+    @media ${theme.media.tablet} {
+        top: 45%;
+    }
 
     @media ${theme.media.mobile} {
         height: 120%;
-        left: 30%;
-        top: 58%;
+        left: 5%;
+        top: 50%;
         transform: translateX(0);
     }
 `

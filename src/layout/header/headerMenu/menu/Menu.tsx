@@ -31,7 +31,7 @@ export const Menu: React.FC<{onCloseMenu?: () => void}> = ( props: { onCloseMenu
                         to={item.href}
                         spy={true}
                         smooth={true}
-                        offset={2}
+                        offset={1}
                         isDynamic={true}>
                         {item.title}
                         <S.Mask>
