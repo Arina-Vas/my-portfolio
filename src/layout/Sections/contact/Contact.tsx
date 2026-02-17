@@ -22,7 +22,7 @@ export const Contact: React.FC = () => {
 
         emailjs
             .sendForm('service_qwitcjj', 'template_ls00xir', form.current, {
-                publicKey: 'XEm3OtaS4xt50YZKR',
+                publicKey: '8neBEfQ6DjcDFJ-ft',
             })
             .then(
                 () => {
